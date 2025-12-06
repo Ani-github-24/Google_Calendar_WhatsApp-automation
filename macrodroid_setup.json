@@ -1,0 +1,18 @@
+{
+  "app": "MacroDroid",
+  "trigger": {
+    "type": "Notification Received",
+    "app": "WhatsApp",
+    "text_content": "Matches Regex: (?i).*(Assignment|Deadline|Project).*"
+  },
+
+  "action": {
+    "type": "HTTP Request (POST)",
+    "url": "URL",
+    "headers": { "Content-Type": "application/json" },
+    "body": {
+      "token": "SECRET_TOKEN",
+      "text": "[notification_text]"
+    }
+  }
+}
